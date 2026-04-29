@@ -3,104 +3,192 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Frankie Palumbo | Accounting Portfolio</title>
+<title>Frank Palumbo | Rutgers Accounting Portfolio</title>
 
 <style>
 :root{
---rutgers-red:#cc0033;
---jets-green:#125740;
---black:#000000;
---white:#ffffff;
+  --scarlet:#cc0033;
+  --dark:#090909;
+  --card:#151515;
+  --text:#f5f5f5;
+  --muted:#b8b8b8;
+  --green:#125740;
 }
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body{
-font-family:Arial, Helvetica, sans-serif;
-background:#f4f4f4;
-color:#333;
-line-height:1.6;
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(135deg,#050505,#151515);
+  color:var(--text);
+  line-height:1.6;
 }
 
 header{
-background:#000;
-color:white;
-text-align:center;
-padding:50px 20px;
-border-bottom:5px solid var(--rutgers-red);
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 20px;
+  background:
+    linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.85)),
+    radial-gradient(circle at top, #cc0033 0%, transparent 35%);
+}
+
+.hero{
+  max-width:900px;
 }
 
 .profile-img{
-width:160px;
-height:160px;
-border-radius:50%;
-object-fit:cover;
-border:4px solid var(--rutgers-red);
-margin-bottom:15px;
+  width:165px;
+  height:165px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid var(--scarlet);
+  box-shadow:0 0 25px rgba(204,0,51,.5);
+  margin-bottom:20px;
 }
 
 h1{
-font-size:2.4rem;
-margin-bottom:8px;
+  font-size:3rem;
+  margin-bottom:10px;
 }
 
-.subtitle{
-font-size:1.1rem;
-color:#ddd;
+.tagline{
+  font-size:1.25rem;
+  color:var(--muted);
+  margin-bottom:20px;
 }
 
-.container{
-max-width:900px;
-margin:auto;
-padding:25px;
+.hero-stats{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+  margin:25px 0;
 }
 
-.card{
-background:white;
-padding:25px;
-margin-bottom:20px;
-border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,.08);
+.stat{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.12);
+  padding:15px 22px;
+  border-radius:14px;
 }
 
-h2{
-color:var(--rutgers-red);
-margin-bottom:12px;
-border-bottom:2px solid #eee;
-padding-bottom:8px;
+.stat strong{
+  display:block;
+  color:var(--scarlet);
+  font-size:1.4rem;
 }
 
 .btn{
-display:inline-block;
-margin-top:15px;
-padding:12px 22px;
-background:var(--rutgers-red);
-color:white;
-text-decoration:none;
-border-radius:6px;
-font-weight:bold;
+  display:inline-block;
+  margin:8px;
+  padding:12px 22px;
+  background:var(--scarlet);
+  color:white;
+  text-decoration:none;
+  border-radius:999px;
+  font-weight:bold;
+  transition:.2s;
 }
 
 .btn:hover{
-background:var(--jets-green);
+  background:white;
+  color:var(--scarlet);
 }
 
-.stats{
-font-weight:bold;
-color:var(--jets-green);
-font-size:1.1rem;
-margin:8px 0;
+.btn-outline{
+  background:transparent;
+  border:2px solid var(--scarlet);
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px;
+}
+
+.section-title{
+  font-size:2rem;
+  margin-bottom:25px;
+  color:white;
+  border-left:6px solid var(--scarlet);
+  padding-left:15px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+.card{
+  background:var(--card);
+  padding:25px;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.card h3{
+  color:var(--scarlet);
+  margin-bottom:10px;
+}
+
+.card p, li{
+  color:var(--muted);
+}
+
+ul{
+  padding-left:18px;
+}
+
+.tiktok-section{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+
+.tiktok-img{
+  width:100%;
+  max-width:390px;
+  border-radius:24px;
+  border:3px solid var(--scarlet);
+  box-shadow:0 0 30px rgba(204,0,51,.25);
+}
+
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.skill{
+  background:rgba(204,0,51,.15);
+  border:1px solid rgba(204,0,51,.45);
+  padding:9px 14px;
+  border-radius:999px;
+  color:white;
+  font-size:.95rem;
 }
 
 footer{
-text-align:center;
-padding:25px;
-font-size:.9rem;
-color:#777;
+  text-align:center;
+  padding:35px 20px;
+  color:var(--muted);
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+@media(max-width:750px){
+  h1{font-size:2.3rem;}
+  .tiktok-section{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -108,52 +196,138 @@ color:#777;
 <body>
 
 <header>
-<img src="Assets/Profile.pic" alt="Frankie Palumbo" class="profile-img">
+  <div class="hero">
+    <img src="Assets/Profile.pic" alt="Frank Palumbo" class="profile-img">
+    <h1>Frank Palumbo</h1>
+    <p class="tagline">Rutgers Business School Accounting Student | Future CPA | Business Leader | Sports Media Creator</p>
 
-<h1>Frankie Palumbo</h1>
+    <div class="hero-stats">
+      <div class="stat"><strong>3.42</strong>GPA</div>
+      <div class="stat"><strong>10.3K+</strong>TikTok Followers</div>
+      <div class="stat"><strong>784K+</strong>TikTok Likes</div>
+      <div class="stat"><strong>2028</strong>CPA Eligible</div>
+    </div>
 
-<p class="subtitle">Junior Accounting Major | Rutgers Business School</p>
-
-<a href="#" class="btn">Resume Coming Soon</a>
+    <a href="Assets/Resume.pdf" class="btn" target="_blank">View Resume</a>
+    <a href="https://www.linkedin.com/in/frank-palumbo-09286b294" class="btn btn-outline" target="_blank">LinkedIn</a>
+    <a href="https://linktr.ee/Letsgojets14" class="btn btn-outline" target="_blank">TikTok Brand</a>
+  </div>
 </header>
 
 <div class="container">
 
-<div class="card">
-<h2>About Me</h2>
-<p>
-I am a Rutgers Business School student pursuing a degree in Accounting.
-I am interested in finance, auditing, business strategy, and analytics.
-I enjoy learning skills that combine business knowledge with real-world results.
-</p>
-</div>
+  <h2 class="section-title">About Me</h2>
+  <div class="card">
+    <p>
+      I am an Accounting major at Rutgers Business School with experience in leadership,
+      operations, student involvement, digital media, and sports broadcasting. I am interested
+      in accounting, finance, business strategy, and using communication skills to create real-world impact.
+    </p>
+  </div>
 
-<div class="card">
-<h2>Education</h2>
-<p><strong>Rutgers University</strong></p>
-<p>B.S. in Accounting</p>
-<p>Expected Graduation: May 2027</p>
-</div>
+  <h2 class="section-title">Education</h2>
+  <div class="card">
+    <h3>Rutgers University — Rutgers Business School</h3>
+    <p>Bachelor of Science in Accounting</p>
+    <p>Expected Graduation: May 2027 | GPA: 3.42 | CPA Eligible: May 2028</p>
+  </div>
 
-<div class="card">
-<h2>Digital Media Experience</h2>
-<p>Founder of TikTok account <strong>@letsgojets14</strong></p>
-<p class="stats">10,000+ Followers</p>
-<p>
-Built an engaged sports audience through content strategy, branding,
-analytics, and consistent growth.
-</p>
-</div>
+  <h2 class="section-title">Experience</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Teaching Assistant</h3>
+      <p>Foundations for Career Journey</p>
+      <ul>
+        <li>Assist professor with class discussions for 200 students.</li>
+        <li>Grade assignments and provide constructive feedback.</li>
+      </ul>
+    </div>
 
-<div class="card">
-<h2>Interests</h2>
-<p>Sports • Finance • Business • Networking • Entrepreneurship</p>
-</div>
+    <div class="card">
+      <h3>Rutgers Riot Squad — Treasurer</h3>
+      <ul>
+        <li>Help organize financing for student trips to schools such as Penn State and Virginia Tech.</li>
+        <li>Assist with planning weekly tailgates using budget and profit margin goals.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Frank’s Fun Center — Manager</h3>
+      <ul>
+        <li>Managed inventory and ordering for $20,000+ worth of products.</li>
+        <li>Led employee engagement and customer satisfaction efforts.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>PKF O’Connor Davies Externship</h3>
+      <ul>
+        <li>Participated in a professional accounting firm exploratory program.</li>
+        <li>Completed office tour and day-in-the-life experience.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>WRSU 88.7 FM — Sports Broadcaster</h3>
+      <ul>
+        <li>Announce live Rutgers sporting events on air.</li>
+        <li>Lead play-by-play commentator for Rutgers wrestling.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Beta Alpha Psi — Candidate</h3>
+      <ul>
+        <li>Participate in professional accounting and finance meetings.</li>
+        <li>Engage with presentations from accounting firms.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2 class="section-title">Digital Media Brand</h2>
+  <div class="tiktok-section">
+    <div class="card">
+      <h3>@letsgojets14</h3>
+      <p>
+        Founded and grew a sports-focused TikTok brand with over 10,000 followers
+        and 784,000 likes. Created content, built an engaged audience, and worked
+        with brands through endorsement and sponsorship opportunities.
+      </p>
+      <br>
+      <p><strong>Focus:</strong> Sports media, content strategy, audience engagement, branding, and monetization.</p>
+    </div>
+
+    <div style="text-align:center;">
+      <img src="Assets/TikTokPage.jpeg" alt="TikTok page screenshot" class="tiktok-img">
+    </div>
+  </div>
+
+  <h2 class="section-title">Skills</h2>
+  <div class="card">
+    <div class="skills">
+      <span class="skill">Accounting</span>
+      <span class="skill">Leadership</span>
+      <span class="skill">Budgeting</span>
+      <span class="skill">Inventory Management</span>
+      <span class="skill">Public Speaking</span>
+      <span class="skill">Sports Broadcasting</span>
+      <span class="skill">Digital Marketing</span>
+      <span class="skill">Brand Partnerships</span>
+      <span class="skill">Adobe Photoshop Certified</span>
+      <span class="skill">Customer Service</span>
+    </div>
+  </div>
+
+  <h2 class="section-title">Contact</h2>
+  <div class="card">
+    <p>Email: <a href="mailto:frankjpalumbo5@gmail.com" style="color:#fff;">frankjpalumbo5@gmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/frank-palumbo-09286b294" target="_blank" style="color:#fff;">linkedin.com/in/frank-palumbo-09286b294</a></p>
+  </div>
 
 </div>
 
 <footer>
-© 2026 Frankie Palumbo
+  © 2026 Frank Palumbo | Rutgers Business School
 </footer>
 
 </body>
