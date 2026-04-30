@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISC Mastery | CPA Prep</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Navigation / Stats Bar -->
+    <header class="app-header">
+        <div class="brand">
+            <span class="logo">ISC</span> Mastery
+        </div>
+        <div class="user-stats">
+            <div class="stat-item">
+                <span class="label">Streak:</span>
+                <span id="streak-count" class="value">0</span> 🔥
+            </div>
+            <div class="stat-item">
+                <span class="label">XP:</span>
+                <span id="xp-count" class="value">0</span>
+            </div>
+            <div class="stat-item">
+                <span id="user-rank" class="rank-badge">IT Associate</span>
+            </div>
+        </div>
+    </header>
+
+    <main id="app-container">
+        
+        <!-- Screen 1: Dashboard (Initial State) -->
+        <section id="dashboard-screen" class="screen">
+            <div class="welcome-card">
+                <h1>Ready to Study?</h1>
+                <p>Prepare for the Information Systems and Controls (ISC) portion of the CPA Exam.</p>
+            </div>
+
+            <div class="mastery-grid">
+                <div class="mastery-card" data-area="1">
+                    <h3>Area I</h3>
+                    <div class="progress-bar"><div class="fill" style="width: 0%"></div></div>
+                    <small>Info Systems & Data</small>
+                </div>
+                <div class="mastery-card" data-area="2">
+                    <h3>Area II</h3>
+                    <div class="progress-bar"><div class="fill" style="width: 0%"></div></div>
+                    <small>Security & Privacy</small>
+                </div>
+                <div class="mastery-card" data-area="3">
+                    <h3>Area III</h3>
+                    <div class="progress-bar"><div class="fill" style="width: 0%"></div></div>
+                    <small>SOC Engagements</small>
+                </div>
+            </div>
+
+            <div class="action-zone">
+                <button id="start-quiz-btn" class="btn-primary">Start New Testlet</button>
+                <button id="review-missed-btn" class="btn-secondary">Review Weaknesses</button>
+            </div>
+        </section>
+
+        <!-- Screen 2: Quiz Engine (Hidden by default) -->
+        <section id="quiz-screen" class="screen hidden">
+            <div class="quiz-header">
+                <span id="question-meta">Area II | MCQ</span>
+                <div id="timer">00:00</div>
+            </div>
+
+            <div id="question-container">
+                <h2 id="question-text">Loading question...</h2>
+                <div id="options-list" class="options-grid">
+                    <!-- Buttons will be injected here by JS -->
+                </div>
+            </div>
+
+            <div id="feedback-container" class="hidden">
+                <div id="feedback-message"></div>
+                <p id="explanation-text"></p>
+                <button id="next-btn" class="btn-primary">Next Question</button>
+            </div>
+
+            <div class="quiz-footer">
+                <button id="flag-btn" class="btn-outline">Flag for Review</button>
+                <span id="progress-text">Question 1 of 10</span>
+            </div>
+        </section>
+
+        <!-- Screen 3: Results (Hidden by default) -->
+        <section id="results-screen" class="screen hidden">
+            <h2>Testlet Complete!</h2>
+            <div class="score-display">
+                <span id="final-score">0%</span>
+            </div>
+            <div id="xp-gained-msg"></div>
+            <button onclick="location.reload()" class="btn-primary">Return to Dashboard</button>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
