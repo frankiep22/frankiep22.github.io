@@ -6,38 +6,14 @@
 <title>Frank Palumbo | Rutgers Accounting Portfolio</title>
 
 <style>
-  .linkedin-scroll-box{
-  max-height:350px;
-  overflow-y:auto;
-  background:rgba(0,0,0,.7);
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:18px;
-  padding:18px;
-}
-
-.linkedin-post{
-  margin-bottom:15px;
-}
-
-.linkedin-img{
-  width:100%;
-  border-radius:12px;
-  margin-bottom:10px;
-}
 :root{
   --scarlet:#cc0033;
-  --dark:#090909;
   --card:#151515;
   --text:#f5f5f5;
   --muted:#b8b8b8;
-  --green:#125740;
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
+*{ margin:0; padding:0; box-sizing:border-box; }
 
 body{
   font-family:Arial, Helvetica, sans-serif;
@@ -53,19 +29,15 @@ header{
   justify-content:center;
   text-align:center;
   padding:40px 20px;
-
   background:
     linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
     url("Assets/Jetlife.png");
-
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
 }
 
-.hero{
-  max-width:900px;
-}
+.hero{ max-width:900px; }
 
 .profile-img{
   width:165px;
@@ -77,10 +49,17 @@ header{
   margin-bottom:20px;
 }
 
-h1{
+.name-row{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
   font-size:3rem;
   margin-bottom:10px;
 }
+
+.logo{ width:60px; height:auto; }
 
 .tagline{
   font-size:1.25rem;
@@ -101,7 +80,7 @@ h1{
   border:1px solid rgba(255,255,255,.25);
   padding:15px 22px;
   border-radius:14px;
-  backdrop-filter: blur(6px);
+  backdrop-filter:blur(6px);
 }
 
 .stat strong{
@@ -140,16 +119,10 @@ h1{
 
 .section-title{
   font-size:2rem;
-  margin-bottom:25px;
+  margin:45px 0 25px;
   color:white;
   border-left:6px solid var(--scarlet);
   padding-left:15px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:22px;
 }
 
 .card{
@@ -169,8 +142,46 @@ h1{
   color:var(--muted);
 }
 
-ul{
-  padding-left:18px;
+ul{ padding-left:18px; }
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:22px;
+}
+
+.linkedin-scroll-box{
+  max-height:500px;
+  overflow-y:auto;
+  background:rgba(0,0,0,.7);
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:18px;
+  padding:18px;
+}
+
+.linkedin-post{
+  background:rgba(255,255,255,.06);
+  padding:15px;
+  border-radius:14px;
+  margin-bottom:18px;
+}
+
+.linkedin-img{
+  width:100%;
+  max-width:650px;
+  display:block;
+  margin:0 auto 12px;
+  border-radius:12px;
+}
+
+.linkedin-post a{
+  display:inline-block;
+  background:var(--scarlet);
+  padding:8px 14px;
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
 }
 
 .tiktok-section{
@@ -179,18 +190,7 @@ ul{
   gap:30px;
   align-items:center;
 }
-.name-row{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap;
-}
 
-.logo{
-  width:60px;
-  height:auto;
-}
 .tiktok-img{
   width:100%;
   max-width:390px;
@@ -222,7 +222,7 @@ footer{
 }
 
 @media(max-width:750px){
-  h1{font-size:2.3rem;}
+  .name-row{font-size:2.3rem;}
   .tiktok-section{grid-template-columns:1fr;}
 }
 </style>
@@ -233,11 +233,13 @@ footer{
 <header>
   <div class="hero">
     <img src="Assets/Profile.pic" alt="Frank Palumbo" class="profile-img">
+
     <h1 class="name-row">
-  <img src="Assets/rutgers.png" class="logo">
-  Frank Palumbo
-  <img src="Assets/rutgers.png" class="logo">
-</h1>
+      <img src="Assets/rutgers.png" class="logo">
+      Frank Palumbo
+      <img src="Assets/rutgers.png" class="logo">
+    </h1>
+
     <p class="tagline">RBS Accounting Student | Summer 2026 PKFOD Audit Intern | Sports Media Creator</p>
 
     <div class="hero-stats">
@@ -266,34 +268,35 @@ footer{
   </div>
 
   <h2 class="section-title">Education</h2>
-  
-</div>
   <div class="card">
     <h3>Rutgers University — Rutgers Business School</h3>
     <p>Bachelor of Science in Accounting</p>
     <p>Expected Graduation: May 2027 | GPA: 3.42 | CPA Eligible: May 2028</p>
   </div>
-<h2 class="section-title">LinkedIn Highlights</h2>
 
-<div class="linkedin-scroll-box">
+  <h2 class="section-title">LinkedIn Highlights</h2>
+  <div class="linkedin-scroll-box">
 
-  <div class="linkedin-post">
-    <img src="Assets/link1.png" class="linkedin-img">
-    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7402350196178776064/" target="_blank">View on LinkedIn</a>
-  </div>
+    <div class="linkedin-post">
+      <img src="Assets/link1.png" class="linkedin-img">
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7402350196178776064/" target="_blank">View on LinkedIn</a>
+    </div>
 
-  <div class="linkedin-post">
-    <img src="Assets/link2.png" class="linkedin-img">
-    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7424182064595488768/" target="_blank">View on LinkedIn</a>
-  </div>
+    <div class="linkedin-post">
+      <img src="Assets/link2.png" class="linkedin-img">
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7424182064595488768/" target="_blank">View on LinkedIn</a>
+    </div>
 
-  <div class="linkedin-post">
-    <img src="Assets/link3.png" class="linkedin-img">
-    <a href="https://www.linkedin.com/feed/update/urn:li:activity:7337569229157621762/" target="_blank">View on LinkedIn</a>
+    <div class="linkedin-post">
+      <img src="Assets/link3.png" class="linkedin-img">
+      <a href="https://www.linkedin.com/feed/update/urn:li:activity:7337569229157621762/" target="_blank">View on LinkedIn</a>
+    </div>
+
   </div>
 
   <h2 class="section-title">Experience</h2>
   <div class="grid">
+
     <div class="card">
       <h3>Teaching Assistant</h3>
       <p>Foundations for Career Journey</p>
@@ -342,10 +345,12 @@ footer{
         <li>Engage with presentations from accounting firms.</li>
       </ul>
     </div>
+
   </div>
 
   <h2 class="section-title">Digital Media Brand</h2>
   <div class="tiktok-section">
+
     <div class="card">
       <h3>@letsgojets14</h3>
       <p>
@@ -360,6 +365,7 @@ footer{
     <div style="text-align:center;">
       <img src="Assets/TikTokPage.jpeg" alt="TikTok page screenshot" class="tiktok-img">
     </div>
+
   </div>
 
   <h2 class="section-title">Skills</h2>
