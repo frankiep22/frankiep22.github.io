@@ -1,0 +1,77 @@
+[
+  {
+    "id": "ISC-01-01",
+    "area": 1,
+    "topic": "IT Infrastructure",
+    "difficulty": 1,
+    "stem": "Which of the following cloud service models provides the customer with the most control over the underlying operating system and network components?",
+    "options": [
+      {"id": "A", "text": "Software as a Service (SaaS)"},
+      {"id": "B", "text": "Platform as a Service (PaaS)"},
+      {"id": "C", "text": "Infrastructure as a Service (IaaS)"},
+      {"id": "D", "text": "Database as a Service (DBaaS)"}
+    ],
+    "answer": "C",
+    "explanation": "In IaaS, the provider manages the hardware, but the user is responsible for the OS, middle-ware, and apps. SaaS (A) and PaaS (B) provide significantly less control to the end-user."
+  },
+  {
+    "id": "ISC-02-12",
+    "area": 2,
+    "topic": "Change Management",
+    "difficulty": 2,
+    "stem": "In a secure System Development Life Cycle (SDLC), when should 'User Acceptance Testing' (UAT) ideally occur?",
+    "options": [
+      {"id": "A", "text": "Immediately after the planning phase"},
+      {"id": "B", "text": "Before the code is moved to the production environment"},
+      {"id": "C", "text": "During the maintenance phase"},
+      {"id": "D", "text": "Only after a security breach is detected"}
+    ],
+    "answer": "B",
+    "explanation": "UAT is the final phase before 'Go-Live.' It ensures the system meets business requirements in a test environment before being deployed to production (Area I: Change Management)."
+  },
+  {
+    "id": "ISC-03-25",
+    "area": 3,
+    "topic": "Security",
+    "difficulty": 2,
+    "stem": "An auditor notices that a company uses a 'Single Sign-On' (SSO) system. What is the primary security risk associated with SSO?",
+    "options": [
+      {"id": "A", "text": "Users must remember too many passwords"},
+      {"id": "B", "text": "A single compromised credential grants access to multiple systems"},
+      {"id": "C", "text": "SSO systems prevent the use of multi-factor authentication"},
+      {"id": "D", "text": "It increases the administrative burden of password resets"}
+    ],
+    "answer": "B",
+    "explanation": "SSO increases efficiency but creates a 'single point of failure.' If one account is hacked, the attacker gains lateral movement across the entire integrated ecosystem."
+  },
+  {
+    "id": "ISC-04-38",
+    "area": 4,
+    "topic": "Privacy",
+    "difficulty": 1,
+    "stem": "Under the HIPAA Security Rule, which of the following is considered a 'Technical Safeguard'?",
+    "options": [
+      {"id": "A", "text": "Employee background checks"},
+      {"id": "B", "text": "Facility access controls"},
+      {"id": "C", "text": "Transmission security (Encryption)"},
+      {"id": "D", "text": "Risk analysis and management policies"}
+    ],
+    "answer": "C",
+    "explanation": "Transmission security, such as encrypting ePHI, is a technical safeguard. Background checks are administrative (A) and facility locks are physical (B)."
+  },
+  {
+    "id": "ISC-05-44",
+    "area": 5,
+    "topic": "SOC Engagements",
+    "difficulty": 3,
+    "stem": "A SOC 2 Type 2 report differs from a SOC 2 Type 1 report primarily because it includes:",
+    "options": [
+      {"id": "A", "text": "A description of the system"},
+      {"id": "B", "text": "An opinion on the design of controls at a point in time"},
+      {"id": "C", "text": "An opinion on the operating effectiveness of controls over a period of time"},
+      {"id": "D", "text": "Financial statement assertions"}
+    ],
+    "answer": "C",
+    "explanation": "Type 1 evaluates the 'Design' at a point in time. Type 2 tests 'Operating Effectiveness' over a period (usually 6-12 months)."
+  }
+]
