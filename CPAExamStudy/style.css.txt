@@ -1,0 +1,198 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-main: #ffffff;
+    --text-dim: #b3b3b3;
+    --primary-red: #cc0033; /* Rutgers Red */
+    --primary-hover: #ff0044;
+    --correct-green: #00c853;
+    --incorrect-red: #ff5252;
+    --border-color: #333333;
+    --transition: all 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header & Stats */
+.app-header {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.brand .logo {
+    color: var(--primary-red);
+}
+
+.user-stats {
+    display: flex;
+    gap: 15px;
+    font-size: 0.9rem;
+}
+
+.rank-badge {
+    background: var(--primary-red);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+/* Layout Containers */
+#app-container {
+    width: 100%;
+    max-width: 600px;
+    padding: 40px 20px;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Dashboard Cards */
+.welcome-card h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.mastery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.mastery-card {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.progress-bar {
+    background: #333;
+    height: 6px;
+    border-radius: 3px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress-bar .fill {
+    background: var(--primary-red);
+    height: 100%;
+    transition: width 0.5s ease;
+}
+
+/* Buttons */
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: var(--transition);
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--primary-red);
+    color: white;
+    padding: 15px 25px;
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 12px 20px;
+}
+
+.btn-secondary:hover {
+    background: var(--border-color);
+}
+
+/* Quiz Styles */
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.option-btn {
+    background: var(--card-bg);
+    color: var(--text-main);
+    text-align: left;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+}
+
+.option-btn:hover {
+    border-color: var(--primary-red);
+}
+
+.option-btn.correct {
+    border-color: var(--correct-green);
+    background: rgba(0, 200, 83, 0.1);
+}
+
+.option-btn.incorrect {
+    border-color: var(--incorrect-red);
+    background: rgba(255, 82, 82, 0.1);
+}
+
+/* Feedback Area */
+#feedback-container {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-red);
+}
+
+#feedback-message {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#explanation-text {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+}
